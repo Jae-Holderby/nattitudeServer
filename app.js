@@ -8,11 +8,16 @@ const logger = require('morgan')
 
 const attitudes = require('./routes/attitudes');
 
+
 const app = express();
 
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.get('/',(req, res, next) => {
+    res.send('Hello World')
+});
 
 app.use('/attitudes', attitudes);
 
