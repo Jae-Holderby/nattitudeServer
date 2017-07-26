@@ -9,4 +9,11 @@ router.get("/", (req, res, next) => {
   });
 });
 
+router.get("/:id", function(req, res, next) {
+  queries.getNickById(req.params.id)
+  .then((attitude) => {
+    res.json(attitude)
+  });
+});
+
 module.exports = router;

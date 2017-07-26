@@ -1,7 +1,7 @@
 
 exports.seed = (knex, Promise) => {
 
-  return knex.raw('DELETE FROM nick; ALTER SEQUENCE nick_id_seq RESTART WITH 7;')
+  return knex.raw('DELETE FROM nick; ALTER SEQUENCE nick_id_seq RESTART WITH 8;')
 
   .then(() => {
 
@@ -38,9 +38,15 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 6,
       date: '2017/06/24',
-      time: '02:30:00',
-      situation: 'Nick tried to run light server and his app server on the same port. This didn\'t work and he got pissed.',
+      time: '14:30:00',
+      situation: 'Nick tried to run light server and his app server on the same port. This didn\'t work and he got pissed!',
       scale: 1
+    }, {
+      id: 7,
+      date: '2017/06/25',
+      time: '09:30:00',
+      situation: 'Nick stayed home with a migrane.',
+      scale: 8
     }];
 
     return knex('nick').insert(attitudes);
