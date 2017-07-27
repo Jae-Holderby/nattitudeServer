@@ -16,11 +16,28 @@ router.get("/:id", function(req, res, next) {
   });
 });
 
-router.post("/", function(req, res) {
+router.post("/", function(req, res, next) {
   let body = req.body;
   queries.postLog(body)
   .then((newAttitude) => {
     res.json(newAttitude[0])
+  });
+});
+
+router.put("/:id", function(req, res, next) {
+  let id = req.params.id;
+  let edit = req.body;
+  queries.editLog(id, edit)
+    .then((editedLog) => {
+      res.json(editedLog[0])
+    });
+});
+
+router.delete("/:id", function(req, res, next){
+  let id = req.params.id;
+  queries.deleteLog(id)
+  .then((deleted) => {
+    res.json({message: 'Record Deleted'})
   });
 });
 

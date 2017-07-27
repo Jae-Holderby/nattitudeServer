@@ -9,5 +9,11 @@ module.exports = {
   },
   postLog: function(body) {
     return knex('nick').insert(body).returning('*')
+  },
+  editLog: function(id, edit) {
+    return knex('nick').where('id', id).update(edit).returning('*')
+  },
+  deleteLog: function(id) {
+    return knex('nick').where('id', id).del()
   }
 }
