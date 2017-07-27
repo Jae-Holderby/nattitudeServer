@@ -16,4 +16,12 @@ router.get("/:id", function(req, res, next) {
   });
 });
 
+router.post("/", function(req, res) {
+  let body = req.body;
+  queries.postLog(body)
+  .then((newAttitude) => {
+    res.json(newAttitude[0])
+  });
+});
+
 module.exports = router;
