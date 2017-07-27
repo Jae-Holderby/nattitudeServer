@@ -17,11 +17,8 @@ app.use
 (bodyParser.json());
 app.use(bodyParser.urlencoded({encoded: false}))
 
-app.get('/',(req, res, next) => {
-    res.send('Hello World')
-});
 
-app.use('/attitudes', attitudes);
+app.use('/', attitudes);
 
 
 
