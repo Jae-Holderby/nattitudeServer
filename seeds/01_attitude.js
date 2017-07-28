@@ -10,25 +10,25 @@ exports.seed = (knex, Promise) => {
       date: '2017/07/24',
       time: '09:15:23',
       situation: 'Nick showed up for class.',
-      scale: 7
+      scale: 5
     }, {
       id: 2,
       date: '2017/07/24',
       time: '09:50:15',
       situation: 'After it was suggested that I was going to make the nattitude app, Nick shrugged.',
-      scale: 3
+      scale: 4
     }, {
       id: 3,
       date: '2017/07/24',
       time: '10:15:00',
       situation: 'Nick placed his head on the table and asked me to smash his head in with his laptop',
-      scale: 2
+      scale: 3
     }, {
       id: 4,
       date: '2017/07/24',
       time: '10:45:00',
       situation: 'After I made a mistake during the lecture Nick laughed and smiled a bit.',
-      scale: 7
+      scale: 6
     }, {
       id: 5,
       date: '2017/07/24',
