@@ -10,7 +10,7 @@ exports.seed = (knex, Promise) => {
       date: '2017/07/24',
       time: '09:15:23',
       situation: 'Nick showed up for class.',
-      scale: 5
+      scale: 7
     }, {
       id: 2,
       date: '2017/07/24',
@@ -28,13 +28,13 @@ exports.seed = (knex, Promise) => {
       date: '2017/07/24',
       time: '10:45:00',
       situation: 'After I made a mistake during the lecture Nick laughed and smiled a bit.',
-      scale: 5
+      scale: 7
     }, {
       id: 5,
       date: '2017/07/24',
       time: '11:56:00',
       situation: 'Nick put his feet up on the table. This indicates that he is a bit agitated.',
-      scale: 3
+      scale: 4
     }, {
       id: 6,
       date: '2017/07/24',
@@ -46,7 +46,7 @@ exports.seed = (knex, Promise) => {
       date: '2017/07/25',
       time: '09:30:00',
       situation: 'Nick stayed home with a migrane.',
-      scale: 8
+      scale: 9
     }];
 
     return knex('nick').insert(attitudes);
